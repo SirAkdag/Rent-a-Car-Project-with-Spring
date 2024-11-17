@@ -1,0 +1,13 @@
+package kodlama.io.rentACar.dataAccess.abstracts;
+
+import kodlama.io.rentACar.entities.concretes.Brand;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+
+//JPA kullanarak veri islemleri yapilir
+public interface BrandRepository extends JpaRepository<Brand,Integer> {
+
+    boolean existsByName(String name);
+
+}
